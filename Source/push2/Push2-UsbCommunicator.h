@@ -31,8 +31,8 @@
 // Forward declarations. This avoid having to include libusb.h from here
 // which leads to declaration conflicts with juce
 
-class libusb_transfer;
-class libusb_device_handle;
+struct libusb_transfer;
+struct libusb_device_handle;
 
 namespace ableton
 {

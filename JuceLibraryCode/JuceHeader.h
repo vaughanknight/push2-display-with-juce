@@ -8,7 +8,7 @@
     your own source files, because that wouldn't pick up the correct configuration
     options for your app.
 
-*/
+*/ 
 
 #ifndef __APPHEADERFILE_KHUPU8__
 #define __APPHEADERFILE_KHUPU8__

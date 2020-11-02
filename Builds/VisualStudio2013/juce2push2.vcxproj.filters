@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="juce2push2">
@@ -347,6 +346,12 @@
     <Filter Include="Juce Library Code">
       <UniqueIdentifier>{8B4D1BAA-6DB4-CAEC-A0FA-271F354D5C61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Doom">
+      <UniqueIdentifier>{f750584c-60de-4272-ab90-ab4487c03174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Doom\Headers">
+      <UniqueIdentifier>{22ebbfec-67c0-4462-9c7b-c0f6d669566a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\push2\Push2-Usb-Communicator.cpp">
@@ -463,9 +468,6 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.cpp">
       <Filter>Juce Modules\juce_audio_basics</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.mm">
-      <Filter>Juce Modules\juce_audio_basics</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_devices\audio_io\juce_AudioDeviceManager.cpp">
       <Filter>Juce Modules\juce_audio_devices\audio_io</Filter>
     </ClCompile>
@@ -527,9 +529,6 @@
       <Filter>Juce Modules\juce_audio_devices\sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.cpp">
-      <Filter>Juce Modules\juce_audio_devices</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.mm">
       <Filter>Juce Modules\juce_audio_devices</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_formats\codecs\flac\libFLAC\bitmath.c">
@@ -703,17 +702,11 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.cpp">
       <Filter>Juce Modules\juce_audio_formats</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.mm">
-      <Filter>Juce Modules\juce_audio_formats</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_processors\format\juce_AudioPluginFormat.cpp">
       <Filter>Juce Modules\juce_audio_processors\format</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_processors\format\juce_AudioPluginFormatManager.cpp">
       <Filter>Juce Modules\juce_audio_processors\format</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_processors\format_types\juce_AudioUnitPluginFormat.mm">
-      <Filter>Juce Modules\juce_audio_processors\format_types</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_processors\format_types\juce_LADSPAPluginFormat.cpp">
       <Filter>Juce Modules\juce_audio_processors\format_types</Filter>
@@ -757,9 +750,6 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.cpp">
       <Filter>Juce Modules\juce_audio_processors</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.mm">
-      <Filter>Juce Modules\juce_audio_processors</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\audio_cd\juce_AudioCDReader.cpp">
       <Filter>Juce Modules\juce_audio_utils\audio_cd</Filter>
     </ClCompile>
@@ -784,22 +774,10 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_android_BluetoothMidiDevicePairingDialogue.cpp">
       <Filter>Juce Modules\juce_audio_utils\native</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_ios_BluetoothMidiDevicePairingDialogue.mm">
-      <Filter>Juce Modules\juce_audio_utils\native</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_linux_AudioCDReader.cpp">
       <Filter>Juce Modules\juce_audio_utils\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_linux_BluetoothMidiDevicePairingDialogue.cpp">
-      <Filter>Juce Modules\juce_audio_utils\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_mac_AudioCDBurner.mm">
-      <Filter>Juce Modules\juce_audio_utils\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_mac_AudioCDReader.mm">
-      <Filter>Juce Modules\juce_audio_utils\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_mac_BluetoothMidiDevicePairingDialogue.mm">
       <Filter>Juce Modules\juce_audio_utils\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\native\juce_win_BluetoothMidiDevicePairingDialogue.cpp">
@@ -818,9 +796,6 @@
       <Filter>Juce Modules\juce_audio_utils\players</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.cpp">
-      <Filter>Juce Modules\juce_audio_utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.mm">
       <Filter>Juce Modules\juce_audio_utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_core\containers\juce_AbstractFifo.cpp">
@@ -929,21 +904,6 @@
       <Filter>Juce Modules\juce_core\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_linux_Threads.cpp">
-      <Filter>Juce Modules\juce_core\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_mac_Files.mm">
-      <Filter>Juce Modules\juce_core\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_mac_Network.mm">
-      <Filter>Juce Modules\juce_core\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_mac_Strings.mm">
-      <Filter>Juce Modules\juce_core\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_mac_SystemStats.mm">
-      <Filter>Juce Modules\juce_core\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_mac_Threads.mm">
       <Filter>Juce Modules\juce_core\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_core\native\juce_posix_NamedPipe.cpp">
@@ -1111,9 +1071,6 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_core\juce_core.cpp">
       <Filter>Juce Modules\juce_core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_core\juce_core.mm">
-      <Filter>Juce Modules\juce_core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_cryptography\encryption\juce_BlowFish.cpp">
       <Filter>Juce Modules\juce_cryptography\encryption</Filter>
     </ClCompile>
@@ -1133,9 +1090,6 @@
       <Filter>Juce Modules\juce_cryptography\hashing</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.cpp">
-      <Filter>Juce Modules\juce_cryptography</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.mm">
       <Filter>Juce Modules\juce_cryptography</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_data_structures\app_properties\juce_ApplicationProperties.cpp">
@@ -1160,9 +1114,6 @@
       <Filter>Juce Modules\juce_data_structures\values</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.cpp">
-      <Filter>Juce Modules\juce_data_structures</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.mm">
       <Filter>Juce Modules\juce_data_structures</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_events\broadcasters\juce_ActionBroadcaster.cpp">
@@ -1198,13 +1149,7 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_events\native\juce_android_Messaging.cpp">
       <Filter>Juce Modules\juce_events\native</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_events\native\juce_ios_MessageManager.mm">
-      <Filter>Juce Modules\juce_events\native</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_events\native\juce_linux_Messaging.cpp">
-      <Filter>Juce Modules\juce_events\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_events\native\juce_mac_MessageManager.mm">
       <Filter>Juce Modules\juce_events\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_events\native\juce_win32_Messaging.cpp">
@@ -1217,9 +1162,6 @@
       <Filter>Juce Modules\juce_events\timers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_events\juce_events.cpp">
-      <Filter>Juce Modules\juce_events</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_events\juce_events.mm">
       <Filter>Juce Modules\juce_events</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\colour\juce_Colour.cpp">
@@ -1498,12 +1440,6 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\native\juce_linux_Fonts.cpp">
       <Filter>Juce Modules\juce_graphics\native</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\native\juce_mac_CoreGraphicsContext.mm">
-      <Filter>Juce Modules\juce_graphics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\native\juce_mac_Fonts.mm">
-      <Filter>Juce Modules\juce_graphics\native</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\native\juce_win32_Direct2DGraphicsContext.cpp">
       <Filter>Juce Modules\juce_graphics\native</Filter>
     </ClCompile>
@@ -1520,9 +1456,6 @@
       <Filter>Juce Modules\juce_graphics\placement</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.cpp">
-      <Filter>Juce Modules\juce_graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.mm">
       <Filter>Juce Modules\juce_graphics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\application\juce_Application.cpp">
@@ -1756,12 +1689,6 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_android_Windowing.cpp">
       <Filter>Juce Modules\juce_gui_basics\native</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_ios_UIViewComponentPeer.mm">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_ios_Windowing.mm">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_linux_Clipboard.cpp">
       <Filter>Juce Modules\juce_gui_basics\native</Filter>
     </ClCompile>
@@ -1769,21 +1696,6 @@
       <Filter>Juce Modules\juce_gui_basics\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_linux_Windowing.cpp">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_mac_FileChooser.mm">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_mac_MainMenu.mm">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_mac_MouseCursor.mm">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_mac_NSViewComponentPeer.mm">
-      <Filter>Juce Modules\juce_gui_basics\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_mac_Windowing.mm">
       <Filter>Juce Modules\juce_gui_basics\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\native\juce_win32_DragAndDrop.cpp">
@@ -1906,9 +1818,6 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.cpp">
       <Filter>Juce Modules\juce_gui_basics</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.mm">
-      <Filter>Juce Modules\juce_gui_basics</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\code_editor\juce_CodeDocument.cpp">
       <Filter>Juce Modules\juce_gui_extra\code_editor</Filter>
     </ClCompile>
@@ -1957,25 +1866,13 @@
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_android_WebBrowserComponent.cpp">
       <Filter>Juce Modules\juce_gui_extra\native</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_ios_UIViewComponent.mm">
-      <Filter>Juce Modules\juce_gui_extra\native</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_linux_SystemTrayIcon.cpp">
       <Filter>Juce Modules\juce_gui_extra\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_linux_WebBrowserComponent.cpp">
       <Filter>Juce Modules\juce_gui_extra\native</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_mac_AppleRemote.mm">
-      <Filter>Juce Modules\juce_gui_extra\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_mac_NSViewComponent.mm">
-      <Filter>Juce Modules\juce_gui_extra\native</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_mac_SystemTrayIcon.cpp">
-      <Filter>Juce Modules\juce_gui_extra\native</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_mac_WebBrowserComponent.mm">
       <Filter>Juce Modules\juce_gui_extra\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\native\juce_win32_ActiveXComponent.cpp">
@@ -1988,9 +1885,6 @@
       <Filter>Juce Modules\juce_gui_extra\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.cpp">
-      <Filter>Juce Modules\juce_gui_extra</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.mm">
       <Filter>Juce Modules\juce_gui_extra</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
@@ -2031,6 +1925,264 @@
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_extra.cpp">
       <Filter>Juce Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Push2.cpp">
+      <Filter>juce2push2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PadRenderer.cpp">
+      <Filter>juce2push2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\am_map.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_event.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_items.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_iwad.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_loop.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_main.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_mode.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\d_net.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\doomdef.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\doomgeneric.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\doomgeneric_win.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\doomstat.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\dstrings.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\dummy.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\f_finale.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\f_wipe.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\g_game.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\gusconf.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\hu_lib.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\hu_stuff.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_cdmus.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_endoom.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_input.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_joystick.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_main.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_scale.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_sound.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_system.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_timer.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\i_video.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\icon.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\info.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_argv.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_bbox.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_cheat.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_config.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_controls.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_fixed.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_menu.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_misc.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\m_random.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\memio.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_ceilng.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_doors.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_enemy.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_floor.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_inter.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_lights.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_map.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_maputl.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_mobj.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_plats.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_pspr.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_saveg.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_setup.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_sight.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_spec.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_switch.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_telept.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_tick.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\p_user.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_bsp.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_data.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_draw.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_main.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_plane.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_segs.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_sky.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\r_things.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\s_sound.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\sha1.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\sounds.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\st_lib.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\st_stuff.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\statdump.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\tables.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\v_video.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\w_checksum.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\w_file.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\w_file_stdc.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\w_main.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\w_wad.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\wi_stuff.c">
+      <Filter>Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Doom\z_zone.c">
+      <Filter>Doom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3807,6 +3959,384 @@
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>Juce Library Code</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\Source\Push2.h">
+      <Filter>juce2push2\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="PadRenderer.h">
+      <Filter>juce2push2\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\modules\Doom\am_map.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\config.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_englsh.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_event.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_items.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_iwad.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_loop.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_main.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_mode.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_player.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_textur.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_think.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\d_ticcmd.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\deh_main.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\deh_misc.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\deh_str.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doom.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomdata.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomdef.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomfeatures.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomgeneric.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomkeys.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomstat.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\doomtype.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\dstrings.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\f_finale.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\f_wipe.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\g_game.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\gusconf.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\hu_lib.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\hu_stuff.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_cdmus.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_endoom.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_joystick.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_scale.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_sound.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_swap.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_system.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_timer.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\i_video.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\info.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_argv.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_bbox.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_cheat.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_config.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_controls.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_fixed.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_menu.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_misc.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\m_random.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\memio.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_client.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_dedicated.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_defs.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_gui.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_io.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_loop.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_packet.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_query.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_sdl.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\net_server.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_inter.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_local.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_mobj.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_pspr.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_saveg.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_setup.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_spec.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\p_tick.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_bsp.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_data.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_defs.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_draw.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_local.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_main.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_plane.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_segs.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_sky.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_state.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\r_things.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\s_sound.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\sha1.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\sounds.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\st_lib.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\st_stuff.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\statdump.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\tables.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\v_patch.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\v_video.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\w_checksum.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\w_file.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\w_main.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\w_merge.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\w_wad.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\wi_stuff.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Doom\z_zone.h">
+      <Filter>Doom\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Resources\PushStartup.png">
@@ -3824,10 +4354,21 @@
     <None Include="..\..\modules\JUCE\modules\juce_graphics\image_formats\pnglib\libpng_readme.txt">
       <Filter>Juce Modules\juce_graphics\image_formats\pnglib</Filter>
     </None>
+    <None Include="..\..\Resources\doom1.wad">
+      <Filter>juce2push2\resources</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc">
       <Filter>Juce Library Code</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Resources\AzureLogo.png">
+      <Filter>juce2push2\resources</Filter>
+    </Image>
+    <Image Include="..\..\Resources\TestPattern.png">
+      <Filter>juce2push2\resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>

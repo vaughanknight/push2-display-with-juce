@@ -192,6 +192,7 @@ static const unsigned char temp_binary_data_0[] =
 "\0IEND\xae""B`\x82";
 
 const char* PushStartup_png = (const char*) temp_binary_data_0;
+//const char* AzureLogo_png = (const char*) temp_binary_data_1;
 
 
 const char* getNamedResource (const char*, int&) throw();

@@ -22,12 +22,18 @@
 
 #include "push2/JuceToPush2DisplayBridge.h"
 #include <assert.h>
+#include "Push2.h"
 
 /*!
  *  A simple demo class that will draw some animation on the push display
  *  and listen to incoming midi input from push
  */
-
+class DoomThread : public juce::Thread
+{
+public:
+		DoomThread(const String& threadName);
+		void run() override;
+};
 class Demo
   : public Timer
   , public MidiInputCallback
@@ -51,13 +57,31 @@ public:
 
   void SetMidiInputCallback(const midicb_t& func);
 
+  void OnPadPressed(Push2Pad pad);
+  void ShiftOffset(float delta);
+  void WidthOffset(float delta);
+
+  void SetColour(int status, int button, int value);
+
+  static Demo* Instance()
+  {
+	  return instance_;
+  }
+
+  void SetRenderData(int width, int height, void* data);
+
 private:
+
+	static Demo* instance_;
+	int doomRenderWidth_;
+	int doomRenderHeight_;
 
   /*!
    *  renders a frame and send it to the push display
    */
 
   void drawFrame();
+
 
   /*!
    *  look for the push 2 input device and starts listening to it
@@ -66,6 +90,11 @@ private:
    */
 
   NBase::Result openMidiDevice();
+
+  int GetAbletonDevice(juce::StringArray& devices);
+
+
+ 
 
   /*!
    *  the juce midi incoming message callback
@@ -81,11 +110,28 @@ private:
 
   void timerCallback() override;
 
-
 private:
   ableton::Push2DisplayBridge bridge_;    /*!< The bridge allowing to use juce::graphics for push */
   ableton::Push2Display push2Display_;                  /*!< The low-level push2 class */
+  
   std::unique_ptr<MidiInput> midiInput_;  /*!< Push2's midi input */
+  std::unique_ptr<MidiOutput> midiOutput_; /*!< Push2's midi output */
+
   midicb_t midiCallback_;                 /*!> The midi callback to call when incoming messages are recieved */
   float elapsed_;                         /*!> Fake elapsed time used for the animation */
+  float offset_;
+  float widthOffset_;
+  void* doomRenderData_ = 0;
+
 };
+
+#ifdef __cplusplus
+#define EXTERNC extern "C"
+#else
+#define EXTERNC
+#endif
+
+
+EXTERNC void Push2_SetRenderData(int width, int height, void* data);
+
+#undef EXTERNC
