@@ -19,10 +19,9 @@
 // DEALINGS IN THE SOFTWARE.
 
 #pragma once
-
-#include "push2/JuceToPush2DisplayBridge.h"
 #include <assert.h>
-#include "Push2.h"
+#include "push2/JuceToPush2DisplayBridge.h"
+#include "Push2/Push2.h"
 
 /*!
  *  A simple demo class that will draw some animation on the push display
@@ -36,7 +35,7 @@ public:
 };
 class Demo
   : public Timer
-  , public MidiInputCallback
+  //, public MidiInputCallback
 {
 public:
 
@@ -49,19 +48,24 @@ public:
   NBase::Result Init();
 
 
-  using midicb_t = std::function<void(const MidiMessage&)>;
+  //using midicb_t = std::function<void(const MidiMessage&)>;
 
   /*!
    *  Allows a client to hook a collback in order to process midi messages recieved from push2
    */
 
-  void SetMidiInputCallback(const midicb_t& func);
+  //void SetMidiInputCallback(const midicb_t& func);
+
+  int PadToDoomKey(Push2Pad pad);
+
+  void OnPadReleased(Push2Pad pad);
+
+  void OnControlChange(uint8 pad, uint8 value);
 
   void OnPadPressed(Push2Pad pad);
   void ShiftOffset(float delta);
   void WidthOffset(float delta);
 
-  void SetColour(int status, int button, int value);
 
   static Demo* Instance()
   {
@@ -70,18 +74,29 @@ public:
 
   void SetRenderData(int width, int height, void* data);
 
+  //int GetAbletonDevice(juce::StringArray& devices);
+
 private:
 
 	static Demo* instance_;
 	int doomRenderWidth_;
 	int doomRenderHeight_;
+	Push2Pad lastKeyPressed_;
+	int* colourShift_;
+	PadEffects * _padEffects;
+	PadRenderer * _padRenderer;
 
   /*!
    *  renders a frame and send it to the push display
    */
 
-  void drawFrame();
+	int clamp(int value, int lower, int upper);
 
+	void drawFrame();
+
+	void ColourTweakerRender(juce::Graphics& g);
+
+  void RenderDoom(juce::Graphics& g);
 
   /*!
    *  look for the push 2 input device and starts listening to it
@@ -91,8 +106,6 @@ private:
 
   NBase::Result openMidiDevice();
 
-  int GetAbletonDevice(juce::StringArray& devices);
-
 
  
 
@@ -101,7 +114,7 @@ private:
    *  @see juce::MidiInputCallback
    */
 
-  void handleIncomingMidiMessage (MidiInput *source, const MidiMessage &message) override;
+  //void handleIncomingMidiMessage (MidiInput *source, const MidiMessage &message) override;
 
   /*!
    *  the juce timer callback
@@ -114,10 +127,10 @@ private:
   ableton::Push2DisplayBridge bridge_;    /*!< The bridge allowing to use juce::graphics for push */
   ableton::Push2Display push2Display_;                  /*!< The low-level push2 class */
   
-  std::unique_ptr<MidiInput> midiInput_;  /*!< Push2's midi input */
-  std::unique_ptr<MidiOutput> midiOutput_; /*!< Push2's midi output */
+  //std::unique_ptr<MidiInput> midiInput_;  /*!< Push2's midi input */
+  //std::unique_ptr<MidiOutput> midiOutput_; /*!< Push2's midi output */
+  //midicb_t midiCallback_;                 /*!> The midi callback to call when incoming messages are recieved */
 
-  midicb_t midiCallback_;                 /*!> The midi callback to call when incoming messages are recieved */
   float elapsed_;                         /*!> Fake elapsed time used for the animation */
   float offset_;
   float widthOffset_;

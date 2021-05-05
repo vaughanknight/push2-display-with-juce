@@ -10,9 +10,6 @@
     <Filter Include="juce2push2\Source">
       <UniqueIdentifier>{62107F39-AE20-3814-6075-972871F369AE}</UniqueIdentifier>
     </Filter>
-    <Filter Include="juce2push2\Source\push2">
-      <UniqueIdentifier>{324EDB7D-024B-6270-55AA-0891C08BCFDF}</UniqueIdentifier>
-    </Filter>
     <Filter Include="juce2push2\Source\libusb">
       <UniqueIdentifier>{B394AD7C-E405-1773-B290-D169FB12B20F}</UniqueIdentifier>
     </Filter>
@@ -352,13 +349,25 @@
     <Filter Include="Doom\Headers">
       <UniqueIdentifier>{22ebbfec-67c0-4462-9c7b-c0f6d669566a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="juce2push2\Source\Push2">
+      <UniqueIdentifier>{be78f48c-cc4a-4958-8d7a-144c2b4167de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="juce2push2\Source\Push2\Push2Midi">
+      <UniqueIdentifier>{b7ce9f2a-2995-4f47-a870-ed7ae34e5acb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="juce2push2\Source\Push2\Push2Midi\Effects">
+      <UniqueIdentifier>{14599947-ba92-43fc-b92e-ef361b6fc12f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="juce2push2\Source\Push2\Push2Display">
+      <UniqueIdentifier>{324EDB7D-024B-6270-55AA-0891C08BCFDF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\push2\Push2-Usb-Communicator.cpp">
-      <Filter>juce2push2\Source\push2</Filter>
+      <Filter>juce2push2\Source\Push2\Push2Display</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\push2\JuceToPush2DisplayBridge.cpp">
-      <Filter>juce2push2\Source\push2</Filter>
+      <Filter>juce2push2\Source\Push2\Push2Display</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\libusb\libusb_platform_wrapper.c">
       <Filter>juce2push2\Source\libusb</Filter>
@@ -1926,12 +1935,6 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_extra.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Push2.cpp">
-      <Filter>juce2push2\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="PadRenderer.cpp">
-      <Filter>juce2push2\Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\modules\Doom\am_map.c">
       <Filter>Doom</Filter>
     </ClCompile>
@@ -2184,19 +2187,49 @@
     <ClCompile Include="..\..\modules\Doom\z_zone.c">
       <Filter>Doom</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\AnimationObject.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\MidiManager.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\MiniAnimationEngine.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\PadEffect.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\PadEffects.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\PadRenderer.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\Effects\Dripping.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCircle.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCross.cpp">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\push2\Push2.cpp">
+      <Filter>juce2push2\Source\Push2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\push2\Push2-UsbCommunicator.h">
-      <Filter>juce2push2\Source\push2</Filter>
+      <Filter>juce2push2\Source\Push2\Push2Display</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\push2\JuceToPush2DisplayBridge.h">
-      <Filter>juce2push2\Source\push2</Filter>
+      <Filter>juce2push2\Source\Push2\Push2Display</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\push2\Push2-Bitmap.h">
-      <Filter>juce2push2\Source\push2</Filter>
+      <Filter>juce2push2\Source\Push2\Push2Display</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\push2\Push2-Display.h">
-      <Filter>juce2push2\Source\push2</Filter>
+      <Filter>juce2push2\Source\Push2\Push2Display</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Push2Demo.h">
       <Filter>juce2push2\Source</Filter>
@@ -4007,9 +4040,6 @@
     <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
-    <ClInclude Include="..\..\Source\Push2.h">
-      <Filter>juce2push2\Source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
@@ -4034,9 +4064,6 @@
     <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
-    <ClInclude Include="PadRenderer.h">
-      <Filter>juce2push2\Source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
@@ -4336,6 +4363,66 @@
     </ClInclude>
     <ClInclude Include="..\..\modules\Doom\z_zone.h">
       <Filter>Doom\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\juce_audio_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_devices\juce_audio_devices.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_formats\juce_audio_formats.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_processors\juce_audio_processors.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_utils\juce_audio_utils.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_core\juce_core.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_cryptography\juce_cryptography.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_data_structures\juce_data_structures.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_events\juce_events.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_graphics\juce_graphics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
+    <ClInclude Include="..\..\modules\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\AnimationObject.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\MidiManager.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\MiniAnimationEngine.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\PadEffect.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\PadEffects.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\PadRenderer.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\Dripping.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\Effects.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCircle.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCross.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2.h">
+      <Filter>juce2push2\Source\Push2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Push2Midi.h">
+      <Filter>juce2push2\Source\Push2\Push2Midi</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

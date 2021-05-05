@@ -212,13 +212,22 @@
     <ClCompile Include="..\..\modules\Doom\w_main.c" />
     <ClCompile Include="..\..\modules\Doom\w_wad.c" />
     <ClCompile Include="..\..\modules\Doom\z_zone.c" />
-    <ClCompile Include="..\..\Source\Push2.cpp" />
     <ClCompile Include="..\..\Source\push2\Push2-Usb-Communicator.cpp" />
     <ClCompile Include="..\..\Source\push2\JuceToPush2DisplayBridge.cpp" />
     <ClCompile Include="..\..\Source\libusb\libusb_platform_wrapper.c" />
     <ClCompile Include="..\..\Source\Push2Demo.cpp" />
     <ClCompile Include="..\..\Source\MainComponent.cpp" />
     <ClCompile Include="..\..\Source\Main.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\AnimationObject.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\Effects\Dripping.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCircle.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCross.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\MidiManager.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\MiniAnimationEngine.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\PadEffect.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\PadEffects.cpp" />
+    <ClCompile Include="..\..\Source\push2\Push2Midi\PadRenderer.cpp" />
     <ClCompile Include="..\..\Source\Result.cpp" />
     <ClCompile Include="..\..\modules\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
@@ -1745,7 +1754,6 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_graphics.cpp" />
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_basics.cpp" />
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_extra.cpp" />
-    <ClCompile Include="PadRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\modules\Doom\am_map.h" />
@@ -1844,13 +1852,24 @@
     <ClInclude Include="..\..\modules\Doom\w_merge.h" />
     <ClInclude Include="..\..\modules\Doom\w_wad.h" />
     <ClInclude Include="..\..\modules\Doom\z_zone.h" />
-    <ClInclude Include="..\..\Source\Push2.h" />
     <ClInclude Include="..\..\Source\push2\Push2-UsbCommunicator.h" />
     <ClInclude Include="..\..\Source\push2\JuceToPush2DisplayBridge.h" />
     <ClInclude Include="..\..\Source\push2\Push2-Bitmap.h" />
     <ClInclude Include="..\..\Source\push2\Push2-Display.h" />
     <ClInclude Include="..\..\Source\Push2Demo.h" />
     <ClInclude Include="..\..\Source\Macros.h" />
+    <ClInclude Include="..\..\Source\push2\Push2.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\AnimationObject.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\Dripping.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\Effects.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCircle.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Effects\ExpandingCross.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\MidiManager.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\MiniAnimationEngine.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\PadEffect.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\PadEffects.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\PadRenderer.h" />
+    <ClInclude Include="..\..\Source\push2\Push2Midi\Push2Midi.h" />
     <ClInclude Include="..\..\Source\Result.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
     <ClInclude Include="..\..\modules\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h" />
@@ -2436,7 +2455,6 @@
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h" />
     <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h" />
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h" />
-    <ClInclude Include="PadRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Resources\doom1.wad" />

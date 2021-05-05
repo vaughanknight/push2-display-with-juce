@@ -31,14 +31,13 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "../JuceLibraryCode/BinaryData.h"
-#include "Push2.h"
+#include "Push2/Push2.h"
 #include "Push2Demo.h"
 #include "Macros.h"
 
 #include <sstream>
 #include <iomanip>
-#include <deque>
-#include "../Builds/VisualStudio2013/PadRenderer.h"
+#include <deque> 
 
 //==============================================================================
 /*
@@ -68,7 +67,12 @@ public:
 		{
 			status_.setText("Push 2 connected", juce::dontSendNotification);
 			
-			demo_.SetMidiInputCallback(
+			MidiManager::getInstance()->SetColour(Push2Status::ControlChange, 0x6D, 18);
+			MidiManager::getInstance()->SetColour(Push2Status::ControlChange, 0x6C, 11);
+			MidiManager::getInstance()->SetColour(Push2Status::ControlChange, 0x6B, 2);
+
+			MidiManager::getInstance()->SetMidiInputCallback(
+			//demo_.SetMidiInputCallback(
 				[this](const MidiMessage& message)
 				{
 					this->processMidiInput(message);
@@ -111,6 +115,7 @@ public:
 			int statusId = int(data[0]);
 
 			int inputId = int(data[1]);
+			int value = int(data[2]);
 
 			Push2 push2 = Push2();
 
@@ -132,45 +137,32 @@ public:
 
 					break;
 				}
-				case Push2Status::ControlChange:
+				case Push2Status::ButtonRelease:
 				{
+
+					if (push2.IsPad(inputId) == true)
+					{
+						oss << "Pad released!";
+						demo_.OnPadReleased(Push2Pad(inputId));
+					}
+					break;
+				}
+				/*case Push2Status::ControlChange:
+				{
+					demo_.OnControlChange(inputId, value);
+
 					if ((inputId >= 0x66 && inputId <= 0x6D) ||
 						(inputId >= 0x14 && inputId <= 0x1B))
 					{
-						demo_.SetColour(Push2Status::ControlChange, inputId, inputId % 8 + 30);
+						MidiManager::getInstance()->SetColour(Push2Status::ControlChange, inputId, inputId % 8 + 30);
 					}
 					else
 					{
-						demo_.SetColour(Push2Status::ControlChange, inputId, inputId % 8 + 30);
+						MidiManager::getInstance()->SetColour(Push2Status::ControlChange, inputId, inputId % 8 + 30);
 					}
 
 					break;
-				}
-			}
-
-			int value = int(data[2]);
-
-			switch (inputId)
-			{
-				case 78:
-				{
-					auto change1 = value == 1 ? 1.0f : -1.0f;
-					float scale1 = 0.01f;
-
-					demo_.ShiftOffset(scale1 * change1);
-
-					break;
-				}
-
-				case 77:
-				{
-					auto change2 = value == 1 ? 1.0f : -1.0f;
-					auto scale2 = 0.1f;
-
-					demo_.WidthOffset(scale2 * change2);
-
-					break;
-				}
+				}*/
 			}
 
 			midiMessageStack_.push_back(oss.str());

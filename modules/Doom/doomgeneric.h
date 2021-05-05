@@ -11,6 +11,8 @@
 extern uint32_t* DG_ScreenBuffer;
 
 
+//static void addKeyToQueue(int pressed, unsigned char keyCode);
+
 void DG_Init();
 void DG_DrawFrame();
 void DG_SleepMs(uint32_t ms);

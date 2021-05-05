@@ -68,6 +68,7 @@ static unsigned char convertToDoomKey(unsigned char key)
 	return key;
 }
 
+
 static void addKeyToQueue(int pressed, unsigned char keyCode)
 {
 	unsigned char key = convertToDoomKey(keyCode);
@@ -77,6 +78,12 @@ static void addKeyToQueue(int pressed, unsigned char keyCode)
 	s_KeyQueue[s_KeyQueueWriteIndex] = keyData;
 	s_KeyQueueWriteIndex++;
 	s_KeyQueueWriteIndex %= KEYQUEUE_SIZE;
+}
+
+
+void addOoomKeyToQueue(int pressed, unsigned char keyCode)
+{
+	addKeyToQueue(pressed, keyCode);
 }
 
 static LRESULT CALLBACK wndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
